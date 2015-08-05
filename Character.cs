@@ -236,7 +236,7 @@ namespace SaiPrototype
             List<string> patterns = GetPatternList(pat);
             foreach (string pattern in patterns)
             {
-                string statement = Regex.Replace(pattern,@"[^\\]$", val);
+                string statement = Regex.Replace(pattern,@"\$", val);
                 AddDirectResponse(statement, response);
             }
         }

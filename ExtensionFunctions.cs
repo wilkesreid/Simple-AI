@@ -25,6 +25,10 @@ namespace SaiPrototype
             // Standard replacements
             str = Regex.Replace(str, @"can i find", "is");
             str = Regex.Replace(str, @"how do i get to", "where is");
+            str = Regex.Replace(str, @"can you tell me ", "");
+            str = Regex.Replace(str, @"i want to know ", "");
+            str = Regex.Replace(str, @"tell me ", "");
+
 
             // contractions
             str = Regex.Replace(str, @"where's|wheres", "where is");
