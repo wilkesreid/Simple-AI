@@ -37,7 +37,13 @@ namespace SaiPrototype
             str = Regex.Replace(str, @"when's|whens", "when is");
             str = Regex.Replace(str, @"why's|whys", "why is");
             str = Regex.Replace(str, @"how's|hows", "how is");
-            
+            str = Regex.Replace(str, @"where're|wherere", "where are");
+            str = Regex.Replace(str, @"who're", "who are");
+            str = Regex.Replace(str, @"what're|whatre", "what are");
+            str = Regex.Replace(str, @"when're|whenre", "when are");
+            str = Regex.Replace(str, @"why're|whyre", "why are");
+            str = Regex.Replace(str, @"how're|howre", "how are");
+
             str = Regex.Replace(str, @"i'm|im", "i am");
             str = Regex.Replace(str, @"you're|youre", "you are");
             str = Regex.Replace(str, @"he's|hes", "he is");

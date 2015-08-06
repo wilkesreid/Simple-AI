@@ -16,20 +16,13 @@ namespace SaiPrototype
         // Main method
         static void Main(string[] args)
         {
-            // Create test character
-            Character Bob = new Character();
-
-            // Customize Bob
-
-            Bob.AddDirectResponse("hello", "hello yourself");
-            Bob.AddEquivalencies("hello", "hi", "hey", "sup");
-            Bob.AddEquivalencies("exit", "quit");
-
-            Bob.AddPatternEquivalencies("who is $", "who $ is", "who $");
-            Bob.AddPatternEquivalencies("where is $", "where $ is", "where $");
-
-            Bob.AddPatternResponse("who is $", "bob", "Bob is the king of Bobania!");
-            Bob.AddPatternResponse("where is $", "bob", "I think he's up in his castle ruling over Bobania.");
+            // Situation
+            wl("The following game is based more around asking questions than responding to what the traveler says. "+
+                "He won't understand if you try to make statements. He's better at responding to relevant questions.");
+            wl("");
+            wl("Type \"exit\" or \"quit\" to leave the game.");
+            wl("");
+            wl(SampleGame.startSituation);
 
             string input;
             // Console-like loop
@@ -40,16 +33,16 @@ namespace SaiPrototype
                 // Attempt to get a response from Bob
                 try
                 {
-                    wl(Bob.GetResponse(input));
+                    wl(SampleGame.Traveler.GetResponse(input));
                 }
                 // If Bob gives no response, handle the exception
                 catch (NoResponseException)
                 {
-                    wl("I have no response to that.");
+                    wl("*The traveler doesn't respond, as if he didn't hear you.*");
                 }
                 
                 // quit loop if user says "quit", or anything equivalent
-            } while (!Bob.AreEquivalent(input,"quit"));
+            } while (!SampleGame.Traveler.AreEquivalent(input,"quit"));
         }
         // Convenient WriteLine method
         public static void wl(object str)
