@@ -14,10 +14,10 @@ of Bobania!"`, as it should.
 The workflow for this github project is as follows (code given works on Windows):
 
 1. Contributors clone the repository to their local machine, and work on it locally: `git clone https://github.com/wilkesreid/Simple-AI`, then `cd Simple-AI`
-2. They checkout the `development` branch, and commit to that: `git checkout development`, and `git commit -m "what this commit did/changed"`
-3. When they want to push a commit to github, they push it to `development`: `git push -u origin development`
+2. They checkout the `development` branch, and commit to that.
+3. When they want to push a commit to github, they push it to `development`.
 4. Every so often, the owner will merge the `development` branch to the `review` branch, where the changes can be discussed.
-5. The owner, and a select number of contributors, will modify the code in the `review` branch to make sure it's ready for release.
+5. The owner, and select contributors, will modify the code in the `review` branch to make sure it's ready for release.
 6. The owner will merge the review branch to the `master` branch.
 
 Because this is the work flow for this project, contributors should ONLY commit and push to the `development` branch, NOT the `review` or `master` branch.
